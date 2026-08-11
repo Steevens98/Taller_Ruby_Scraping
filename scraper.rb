@@ -27,7 +27,7 @@ doc.css("li.product-item").each do |producto|
 
     if precio < 400
       puts "Tía: #{titulo} - $#{precio}"
-      resultados << ["Tía","Electrodomésticos línea blanca",titulo,precio,"USD"]
+      resultados << ["Tia","Electrodomesticos linea blanca",titulo,precio,"USD"]
     end
   end
 end
@@ -98,7 +98,7 @@ if response.success?
 
     puts "Casa del Libro: #{titulo} - €#{precio}"
 
-    resultados << ["Casa del Libro","Libros más vendidos",titulo,precio,"EUR"]
+    resultados << ["Casa del Libro","Libros mas vendidos",titulo,precio,"EUR"]
   end
 
 else
@@ -183,7 +183,7 @@ end
 # ============================================================
 
 CSV.open("productos_scraping.csv","w",write_headers: true,
-  headers: ["Sitio","Categoría","Producto","Precio","Moneda"]
+  headers: ["Sitio","Categoria","Producto","Precio","Moneda"]
 ) do |csv|
   resultados.each do |producto|
     csv << producto
